@@ -56,12 +56,12 @@ export default function NewExamPage() {
   }
 
   return (
-    <div className="max-w-xl mx-auto mt-10 p-6 shadow rounded-lg border border-content-secondary">
+    <div className="max-w-xl mx-auto mt-10 p-6  rounded-lg  shadow-2xl shadow-accent-primary border-none">
       <h1 className="text-2xl font-bold mb-4">Novo Exame</h1>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <Label className="block mb-1 text-sm font-medium">Nome</Label>
+          <Label className="block mb-1 text-xl font-medium">Nome</Label>
           <Input
             type="text"
             className="w-full p-2 border-content-secondary rounded-md"
@@ -73,7 +73,7 @@ export default function NewExamPage() {
         </div>
 
         <div>
-          <Label className="block mb-1 text-sm font-medium">
+          <Label className="block mb-1 text-xl font-medium">
             Especialidade
           </Label>
           <Input
@@ -88,7 +88,7 @@ export default function NewExamPage() {
 
         <Button
           disabled={loading}
-          className="flex justify-center items-center mx-auto bg-accent-primary text-white py-2 rounded-full hover:bg-accent-blue disabled:opacity-50"
+          className="mt-8 mb-4 flex justify-center text-xl items-center mx-auto bg-accent-primary text-white  rounded-md hover:bg-accent-blue disabled:opacity-50"
         >
           {loading ? 'Criando...' : 'Criar Exame'}
         </Button>
