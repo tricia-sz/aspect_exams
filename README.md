@@ -10,9 +10,9 @@ agendamentos e excluam agendamentos existentes.
 
 ### 1. 🗂️ Gerenciamento de Exames
 
-○ **Visualizar Exames Disponíveis:**  
-■ Listar todos os tipos de exames disponíveis para agendamento.  
-■ **Detalhes de cada exame:**
+- [x] **Visualizar Exames Disponíveis:**  
+      ■ Listar todos os tipos de exames disponíveis para agendamento.  
+      ■ **Detalhes de cada exame:**
 
 - ■ Nome do Exame
 - ■ Especialidade médica
