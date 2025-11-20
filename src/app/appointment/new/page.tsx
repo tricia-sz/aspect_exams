@@ -1,5 +1,8 @@
 import { redirect } from 'next/navigation';
 import { prisma } from '../../../lib/prisma';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 export default async function NewAppointmentPage() {
   const exams = await prisma.exam.findMany();
@@ -21,30 +24,37 @@ export default async function NewAppointmentPage() {
   }
 
   return (
-    <div className="max-w-lg mx-auto p-6">
+    <div className="max-w-xl mx-auto mt-10 p-6 rounded-lg shadow-2xl shadow-accent-primary border-none">
       <h1 className="text-2xl font-bold mb-4">Novo Agendamento</h1>
 
-      <form action={createAppointment} className="space-y-4">
-        <select name="examId" className="w-full p-2 border rounded">
+      <form action={createAppointment} className="space-y-4 py-2">
+        <select
+          name="examId"
+          className="w-full p-2  border  border-content-secondary rounded-md text-xl"
+        >
           {exams.map((e) => (
-            <option key={e.id} value={e.id}>
+            <option
+              key={e.id}
+              value={e.id}
+              className=" border-content-secondary rounded-md text-xl"
+            >
               {e.examName}
             </option>
           ))}
         </select>
-        <input
+        <Input
           type="datetime-local"
           name="scheduledAt"
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border border-content-secondary rounded-md"
         />
-        <textarea
+        <Textarea
           name="additionalInformation"
           placeholder="Observações"
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border-content-secondary rounded-md text-xl"
         />
-        <button className="bg-accent-primary text-white px-4 py-2 rounded">
+        <Button className="w-sm text-xl bg-accent-primary flex justify-center mx-auto text-white px-4 py-2 rounded">
           Salvar
-        </button>
+        </Button>
       </form>
     </div>
   );
