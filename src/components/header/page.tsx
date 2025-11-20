@@ -7,11 +7,11 @@ import { GrSchedule } from 'react-icons/gr';
 
 export default function Header() {
   return (
-    <header className="w-full mx-auto border-b border-b-accent-purple leading-relaxed">
+    <header className="bg-accent-primary w-full mx-auto border-b border-b-accent-purple leading-relaxed">
       <div className="w-full container mx-auto flex items-center justify-between px-6 py-8">
         <div className=" items-center gap-3">
           <Image
-            src="/logoAspect.png"
+            src="/logoAspectWhite.png"
             alt="logo aspect white"
             width={200}
             height={200}
@@ -22,28 +22,28 @@ export default function Header() {
         <nav className="w-full text-white justify-center flex items-center gap-14 px-4 py-2">
           <Link
             href={'/'}
-            className="bg-accent-primary gap-6 px-6 py-2  rounded-full hover:bg-accent-purple transition hover:bg-amber-700"
+            className="bg-accent-blue gap-6 px-6 py-2  rounded-full hover:bg-accent-purple transition hover:bg-amber-700"
           >
             <div className="flex gap-2">
-              <IoHomeSharp className="text-amber-600" size={24} />
+              <IoHomeSharp className="text-accent-primary" size={24} />
               Home
             </div>
           </Link>
           <Link
-            href={'/exames'}
-            className="bg-accent-primary px-6 py-2  rounded-full hover:bg-accent-purple transition hover:bg-amber-700"
+            href={'/exam'}
+            className="bg-accent-blue px-6 py-2  rounded-full hover:bg-accent-purple transition hover:bg-amber-700"
           >
             <div className="flex gap-3">
-              <FaUserDoctor size={24} />
+              <FaUserDoctor size={24} className="text-accent-primary" />
               Exames
             </div>
           </Link>
           <Link
-            href={'/agendamentos'}
-            className="bg-accent-primary gap-6 px-6 py-2  rounded-full hover:bg-accent-purple transition hover:bg-amber-700"
+            href={'/appointment'}
+            className="bg-accent-blue gap-6 px-6 py-2  rounded-full hover:bg-accent-purple transition hover:bg-amber-700"
           >
             <div className="flex gap-3">
-              <GrSchedule size={24} />
+              <GrSchedule size={24} className="text-accent-primary" />
               Agendamentos
             </div>
           </Link>
