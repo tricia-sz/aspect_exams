@@ -1,0 +1,32 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Exam {
+  id                 String        @id @default(uuid())
+  examName           String        @unique
+  medicalSpecialisty String
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+  appointments       Appointment[]
+
+  @@map("exams")
+}
+
+model Appointment {
+  id                    String   @id @default(uuid())
+  examId                String
+  scheduledAt           DateTime
+  additionalInformation String?
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+  exam                  Exam     @relation(fields: [examId], references: [id])
+
+  @@map("appointments")
+}
