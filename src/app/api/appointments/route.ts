@@ -4,15 +4,12 @@ import { prisma } from '../../../lib/prisma';
 export async function GET() {
   try {
     const appointments = await prisma.appointment.findMany({
-      include: {
-        exam: true,
-      },
       orderBy: { scheduledAt: 'asc' },
+      include: { exam: true },
     });
 
     return NextResponse.json(appointments);
   } catch (err) {
-    console.error('[GET /api/appointments] ERROR:', err);
     return NextResponse.json(
       { error: 'Erro ao buscar agendamentos.' },
       { status: 500 }
@@ -22,8 +19,7 @@ export async function GET() {
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
-    const { examId, scheduledAt, additionalInformation } = body;
+    const { examId, scheduledAt, additionalInformation } = await req.json();
 
     if (!examId || !scheduledAt) {
       return NextResponse.json(
@@ -32,7 +28,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const appointment = await prisma.appointment.create({
+    const created = await prisma.appointment.create({
       data: {
         examId,
         scheduledAt: new Date(scheduledAt),
@@ -40,9 +36,8 @@ export async function POST(req: Request) {
       },
     });
 
-    return NextResponse.json(appointment, { status: 201 });
+    return NextResponse.json(created, { status: 201 });
   } catch (err) {
-    console.error('[POST /api/appointments] ERROR:', err);
     return NextResponse.json(
       { error: 'Erro ao criar agendamento.' },
       { status: 500 }
