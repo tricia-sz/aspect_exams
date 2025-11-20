@@ -8,7 +8,7 @@ export function Providers({ children }: { children: ReactNode }) {
       attribute="class"
       defaultTheme="dark"
       enableSystem={true}
-      // disableTransitionOnChange
+      disableTransitionOnChange
     >
       {children}
     </ThemeProvider>
