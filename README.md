@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔍 Desafio Técnico: Aspect
 
-## Getting Started
+## 🎯 Objetivo
 
-First, run the development server:
+Aplicação web para gerenciamento de agendamentos de exames
+hospitalares, permitindo que os usuários visualizem exames disponíveis, adicionem
+agendamentos e excluam agendamentos existentes.
+
+## 📌 Requisitos Funcionais
+
+### 1. 🗂️ Gerenciamento de Exames
+
+○ **Visualizar Exames Disponíveis:**  
+■ Listar todos os tipos de exames disponíveis para agendamento.  
+■ **Detalhes de cada exame:**
+
+- ■ Nome do Exame
+- ■ Especialidade médica
+
+### 2. 📅 Agendamento de Exames
+
+○ **Adicionar Agendamento:**  
+■ Permitir que usuários agendem um exame selecionando:
+
+- ■ Tipo de exame
+- ■ Data e hora disponíveis
+- ■ Informações adicionais (observações)
+
+○ **Visualizar Agendamentos:**  
+■ Listar todos os exames agendados.  
+■ **Detalhes de cada agendamento:**
+
+- ■ Tipo de exame
+- ■ Data e hora agendada
+- ■ Informações adicionais
+
+○ **Excluir Agendamento:**  
+■ Permitir que usuários removam um agendamento existente.
+
+---
+
+## 🛠️ Tecnologias a Serem Utilizadas
+
+### 💻 Frontend
+
+- [x] React.js com TypeScript  
+       ● Gerenciamento de estado (Redux, Context API ou similar)  
+       ● Consumo de APIs RESTful
+
+### 🧩 Backend
+
+● Node.js com TypeScript  
+● Frameworks sugeridos: Express.js, Nestjs ou
+
+- [x] similar (NeXt.Js 15)
+
+### 🗄️ Banco de Dados
+
+- [x] SQL (PostgreSQL, MySQL ou similar)  
+       ● ORM/Query Builder sugerido: TypeORM, Sequelize, Knex.js ou
+- [x] similar (Prisma)
+
+---
+
+## ⭐ Não é obrigatório, mas vamos curtir se você:
+
+- [x] Realizar commits específicos e detalhados;
+- [ ] Acrescentar algum tipo de cache;
+- [ ] Disponibilizar uma solução para deploy da aplicação (Helm chart, docker-compose
+      ou similar);
+
+---
+
+## 🚀 Entrega
+
+- [x] Compartilhar o link do repositório público (GitHub ou similar).  
+       ● Assegure-se de que o projeto possa ser executado localmente seguindo as
+      instruções do README.  
+       ● Opcionalmente, hospede a aplicação em um ambiente online (como Heroku, Vercel,
+      Netlify) e forneça o link de acesso.
+
+## 📖 Como Executar o Projeto
+
+### Pré-requisitos
+
+- Node.js (>= 18.x)
+- NPM ou Yarn -[x] Banco de dados SQL (PostgreSQL ou MySQL)
+
+### 🦶🏼 Passos a passo de como executar localmente.
+
+### 1. Clone o repositório:Ô
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone git@github.com:tricia-sz/aspect_exams.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instalando as dependências:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd aspect_exams
+  npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
 
-## Learn More
+### 3. Configurando o banco de dados no arquivo `.env`:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+  DATABASE_URL="postgresql://docker:docker@localhost:5432/aspectexams?schema=public"
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Executando as migrações do Prisma:
 
-## Deploy on Vercel
+```bash
+  npx prisma migrate dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 5. Iniciando o server:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+  npm run dev
+```
