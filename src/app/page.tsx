@@ -1,9 +1,8 @@
-import Exam from '../components/exam/page';
+import ExamPage from './exam/page';
 export default async function Home() {
   return (
     <div>
-      <h1>Home Page</h1>
-      <Exam />
+      <ExamPage />
     </div>
   );
 }

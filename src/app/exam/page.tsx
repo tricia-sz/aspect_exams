@@ -11,6 +11,13 @@ export default async function ExamPage() {
     <div className="max-w-3xl mx-auto py-10">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-3xl font-bold">Exames disponíveis</h1>
+
+        <a
+          href="/exam/new"
+          className="inline-block mb-4 bg-accent-primary text-white px-4 py-2 rounded-full hover:bg-accent-blue"
+        >
+          + Novo Exame
+        </a>
       </div>
 
       <div className="space-y-4">

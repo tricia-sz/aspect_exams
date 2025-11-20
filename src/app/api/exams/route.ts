@@ -1,3 +1,5 @@
+export const runtime = 'nodejs';
+
 import { NextResponse } from 'next/server';
 import { prisma } from '../../../lib/prisma';
 
@@ -24,7 +26,7 @@ export async function POST(req: Request) {
 
     if (!examName || !medicalSpecialisty) {
       return NextResponse.json(
-        { error: 'Nome do Exame  e Especialidade são obrigatórios.' },
+        { error: 'Nome do Exame e Especialidade são obrigatórios.' },
         { status: 400 }
       );
     }
