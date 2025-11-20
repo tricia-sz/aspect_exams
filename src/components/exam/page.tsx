@@ -21,11 +21,11 @@ export default async function ExamPage() {
         {exams.map((exam) => (
           <div
             key={exam.id}
-            className="border border-gray-300 rounded-lg p-4 shadow-sm hover:shadow-md transition"
+            className="border border-content-secondary rounded-lg p-4 shadow-sm hover:shadow-md transition"
           >
             <h2 className="text-xl font-semibold">{exam.examName}</h2>
-            <p className="text-gray-600">{exam.medicalSpecialisty}</p>
-            <p className="text-ms text-gray-400 mt-1">
+            <p className="text-content-secondary">{exam.medicalSpecialisty}</p>
+            <p className="text-ms text-content-tertiary">
               Criado em: {new Date(exam.createdAt).toLocaleDateString('pt-BR')}
             </p>
           </div>
