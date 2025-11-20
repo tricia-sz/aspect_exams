@@ -10,7 +10,7 @@ export default async function ExamPage() {
   return (
     <div className="max-w-3xl mx-auto py-10">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold">Exames disponíveis</h1>
+        <h1 className="text-3xl font-bold">Exames</h1>
 
         <a
           href="/exam/new"

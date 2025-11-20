@@ -48,7 +48,7 @@ export default function Header() {
             </div>
           </Link>
         </nav>
-        <div className="rounded-full hover:bg-accent-purple-light transition hover:bg-accent-primary">
+        <div className="rounded-full hover:bg-accent-purple-light transition">
           <ThemeToggle />
         </div>
       </div>
