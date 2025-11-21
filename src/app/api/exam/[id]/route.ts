@@ -1,17 +1,15 @@
 export const runtime = 'nodejs';
 
-import { NextResponse, type NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
 export async function GET(
-  req: NextRequest,
-  context: { params: Promise<{ id: string }> }
+  req: Request,
+  { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = await context.params;
-
     const exam = await prisma.exam.findUnique({
-      where: { id },
+      where: { id: params.id },
       include: { appointments: true },
     });
 

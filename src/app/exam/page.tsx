@@ -1,11 +1,10 @@
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
-
 import { prisma } from '../../lib/prisma';
 import { IoEyeSharp } from 'react-icons/io5';
 import { IoIosAdd } from 'react-icons/io';
 import Link from 'next/link';
 import { Card } from '@/components/ui/card';
+
+export const dynamic = 'force-dynamic';
 
 export default async function ExamPage() {
   const exams = await prisma.exam.findMany({
