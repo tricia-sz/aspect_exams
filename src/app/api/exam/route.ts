@@ -1,49 +1,38 @@
 export const runtime = 'nodejs';
 
 import { NextResponse } from 'next/server';
-import { prisma } from '../../../lib/prisma';
+import { prisma } from '@/lib/prisma';
 
-export async function GET() {
+export async function GET(
+  req: Request,
+  { params }: { params: { id: string } }
+) {
   try {
-    const exams = await prisma.exam.findMany({
-      orderBy: { createdAt: 'desc' },
-    });
+    const { id } = params;
 
-    return NextResponse.json(exams);
-  } catch (err) {
-    console.error('[GET /api/exam] ERROR:', err);
-    return NextResponse.json(
-      { error: 'Erro ao buscar exames.' },
-      { status: 500 }
-    );
-  }
-}
-
-export async function POST(req: Request) {
-  try {
-    const body = await req.json();
-    const { examName, medicalSpecialisty } = body;
-
-    if (!examName || !medicalSpecialisty) {
+    if (!id) {
       return NextResponse.json(
-        { error: 'Nome do Exame e Especialidade são obrigatórios.' },
+        { error: 'ID do exame é obrigatório.' },
         { status: 400 }
       );
     }
 
-    const exam = await prisma.exam.create({
-      data: {
-        examName,
-        medicalSpecialisty,
-      },
+    const exam = await prisma.exam.findUnique({
+      where: { id },
     });
 
-    return NextResponse.json(exam, { status: 201 });
-  } catch (err) {
-    console.error('[POST /api/exam] ERROR:', err);
+    if (!exam) {
+      return NextResponse.json(
+        { error: 'Exame não encontrado.' },
+        { status: 404 }
+      );
+    }
 
+    return NextResponse.json(exam);
+  } catch (err) {
+    console.error('[GET /api/exam/:id] ERROR:', err);
     return NextResponse.json(
-      { error: 'Erro ao criar exame.' },
+      { error: 'Erro ao buscar exame.' },
       { status: 500 }
     );
   }

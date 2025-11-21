@@ -1,15 +1,27 @@
 'use client';
 
 import { useTheme } from 'next-themes';
-export function ThemeToggle() {
+import { useEffect, useState } from 'react';
+
+export default function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) {
+    return (
+      <button className="p-2 rounded bg-secondary text-foreground">...</button>
+    );
+  }
 
   return (
     <button
       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       className="p-2 rounded bg-secondary text-foreground"
     >
-      {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+      {theme === 'light' ? '☀️ Light' : '🌙 Dark'}
     </button>
   );
 }

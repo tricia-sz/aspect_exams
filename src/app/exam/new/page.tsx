@@ -2,9 +2,9 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
+import { Label } from '@radix-ui/react-label';
 import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 
 export default function NewExamPage() {
   const router = useRouter();

@@ -1,7 +1,7 @@
-import { Card } from 'components/ui/card';
 import { prisma } from '../../../lib/prisma';
-import Link from 'next/link';
 import { IoArrowBack } from 'react-icons/io5';
+import Link from 'next/link';
+import { Card } from '@/components/ui/card';
 
 export default async function ExamDetailsPage({
   params,
@@ -34,7 +34,8 @@ export default async function ExamDetailsPage({
       <h1 className="text-3xl font-bold mb-4">{exam.examName}</h1>
 
       <p className="text-lg text-content-secondary mb-2">
-        Especialidade: <strong>{exam.medicalSpecialisty}</strong>
+        <span className="font-bold">Especialidade</span>:
+        {exam.medicalSpecialisty}
       </p>
 
       <p className="text-md text-content-tertiary">

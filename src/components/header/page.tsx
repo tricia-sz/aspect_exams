@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ThemeToggle } from '../theme-toggle/theme-toggle';
 import { IoHomeSharp } from 'react-icons/io5';
 import { FaUserDoctor } from 'react-icons/fa6';
 import { GrSchedule } from 'react-icons/gr';
+import ThemeToggle from '../theme-toggle/theme-toggle';
 
 export default function Header() {
   return (

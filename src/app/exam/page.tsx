@@ -1,8 +1,8 @@
 import { prisma } from '../../lib/prisma';
-import Link from 'next/link';
 import { IoEyeSharp } from 'react-icons/io5';
 import { IoIosAdd } from 'react-icons/io';
-import { Card } from 'components/ui/card';
+import Link from 'next/link';
+import { Card } from '@/components/ui/card';
 
 export const dynamic = 'force-dynamic';
 
