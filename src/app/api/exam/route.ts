@@ -11,7 +11,7 @@ export async function GET() {
 
     return NextResponse.json(exams);
   } catch (err) {
-    console.error('[GET /api/exams] ERROR:', err);
+    console.error('[GET /api/exam] ERROR:', err);
     return NextResponse.json(
       { error: 'Erro ao buscar exames.' },
       { status: 500 }
@@ -40,7 +40,7 @@ export async function POST(req: Request) {
 
     return NextResponse.json(exam, { status: 201 });
   } catch (err) {
-    console.error('[POST /api/exams] ERROR:', err);
+    console.error('[POST /api/exam] ERROR:', err);
 
     return NextResponse.json(
       { error: 'Erro ao criar exame.' },

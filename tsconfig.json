@@ -13,14 +13,16 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+
+    // 🔥 Obrigatório para habilitar aliases
+    "baseUrl": ".",
+
+    // 🔥 Alias @ apontando corretamente para /src
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": ["src/*"]
+    },
+
+    "plugins": [{ "name": "next" }]
   },
   "include": [
     "next-env.d.ts",

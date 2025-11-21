@@ -7,7 +7,7 @@ import { GrSchedule } from 'react-icons/gr';
 
 export default function Header() {
   return (
-    <header className="bg-accent-primary w-full mx-auto border-b border-b-accent-purple leading-relaxed">
+    <header className="bg-accent-primary w-full mx-auto border-b border-b-accent-orange leading-relaxed">
       <div className="w-full container mx-auto flex items-center justify-between px-6 py-8">
         <div className=" items-center gap-3">
           <Image
