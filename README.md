@@ -28,7 +28,7 @@ agendamentos e excluam agendamentos existentes.
 ○ **Visualizar Agendamentos:**
 
 - [x] Listar todos os exames agendados.  
-      **Detalhes de cada agendamento:**
+       **Detalhes de cada agendamento:**
 
 - ■ Tipo de exame
 - ■ Data e hora agendada
