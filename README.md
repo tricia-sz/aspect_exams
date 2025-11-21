@@ -10,19 +10,19 @@ agendamentos e excluam agendamentos existentes.
 
 ### 1. 🗂️ Gerenciamento de Exames
 
-- [x] **Visualizar Exames Disponíveis:**  
-      ■ Listar todos os tipos de exames disponíveis para agendamento.  
-      ■ **Detalhes de cada exame:**
+- [x] **Visualizar Exames Disponíveis:**
+- [x] Listar todos os tipos de exames disponíveis para agendamento.
+- [ ] **Detalhes de cada exame:**
 
 - ■ Nome do Exame
 - ■ Especialidade médica
 
 ### 2. 📅 Agendamento de Exames
 
-○ **Adicionar Agendamento:**  
-■ Permitir que usuários agendem um exame selecionando:
+- [x] **Adicionar Agendamento:**  
+       -[x] Permitir que usuários agendem um exame selecionando:
 
-- ■ Tipo de exame
+- [x] Tipo de exame
 - ■ Data e hora disponíveis
 - ■ Informações adicionais (observações)
 
