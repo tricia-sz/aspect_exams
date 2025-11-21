@@ -15,7 +15,7 @@ export default async function AppointmentPage() {
 
         <Link
           href="/appointment/new"
-          className="bg-accent-primary text-white px-4 py-2 rounded-md hover:bg-accent-blue shadow-sm hover:shadow-md transition  shadow-accent-primary"
+          className="bg-accent-primary text-white px-4 py-2 rounded-md hover:bg-accent-orange hover:shadow-md transition shadow-sm"
         >
           + Novo Agendamento
         </Link>

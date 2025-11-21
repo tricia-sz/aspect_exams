@@ -15,7 +15,7 @@ export default async function ExamPage() {
 
         <a
           href="/exam/new"
-          className="inline-block mb-4 bg-accent-primary text-white px-4 py-2 rounded-md hover:bg-accent-blue shadow-sm hover:shadow-md transition shadow-accent-blue"
+          className="inline-block mb-4 bg-accent-primary text-white px-4 py-2 rounded-md hover:bg-accent-orange shadow-sm hover:shadow-md transition"
         >
           + Novo Exame
         </a>
