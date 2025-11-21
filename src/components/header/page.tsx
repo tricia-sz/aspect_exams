@@ -11,10 +11,10 @@ export default function Header() {
       <div className="w-full container mx-auto flex items-center justify-between px-6 py-8">
         <div className=" items-center gap-3">
           <Image
-            src="/logoAspectWhite.png"
+            src="/Am.png"
             alt="logo aspect white"
-            width={200}
-            height={200}
+            width={300}
+            height={300}
             className="object-contain"
           />
         </div>
@@ -22,7 +22,7 @@ export default function Header() {
         <nav className="w-full text-white justify-center flex items-center gap-14 px-4 py-2">
           <Link
             href={'/'}
-            className="bg-accent-blue gap-6 px-6 py-2  rounded-full hover:bg-accent-purple transition hover:bg-amber-700"
+            className="bg-white text-accent-primary gap-6 px-6 py-2  rounded-md hover:bg-accent-purple transition hover:bg-amber-500"
           >
             <div className="flex gap-2">
               <IoHomeSharp className="text-accent-primary" size={24} />
@@ -31,7 +31,7 @@ export default function Header() {
           </Link>
           <Link
             href={'/exam'}
-            className="bg-accent-blue px-6 py-2  rounded-full hover:bg-accent-purple transition hover:bg-amber-700"
+            className="bg-white text-accent-primary px-6 py-2  rounded-md hover:bg-accent-purple transition hover:bg-amber-500"
           >
             <div className="flex gap-3">
               <FaUserDoctor size={24} className="text-accent-primary" />
@@ -40,7 +40,7 @@ export default function Header() {
           </Link>
           <Link
             href={'/appointment'}
-            className="bg-accent-blue gap-6 px-6 py-2  rounded-full hover:bg-accent-purple transition hover:bg-amber-700"
+            className="bg-white text-accent-primary gap-6 px-6 py-2  rounded-md hover:bg-accent-purple transition hover:bg-amber-500"
           >
             <div className="flex gap-3">
               <GrSchedule size={24} className="text-accent-primary" />
@@ -48,7 +48,7 @@ export default function Header() {
             </div>
           </Link>
         </nav>
-        <div className="rounded-full hover:bg-accent-purple-light transition">
+        <div className="rounded-full hover:bg-accent-purple-light transition text-accent-orange">
           <ThemeToggle />
         </div>
       </div>

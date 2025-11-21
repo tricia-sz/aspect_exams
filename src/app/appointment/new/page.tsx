@@ -1,5 +1,8 @@
 import { redirect } from 'next/navigation';
 import { prisma } from '../../../lib/prisma';
+import { Textarea } from '@/components/ui/textarea';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 export default async function NewAppointmentPage() {
   const exams = await prisma.exam.findMany();
@@ -21,30 +24,45 @@ export default async function NewAppointmentPage() {
   }
 
   return (
-    <div className="max-w-lg mx-auto p-6">
+    <div className="max-w-xl mx-auto mt-10 p-6 rounded-lg shadow-2xl shadow-accent-blue border-none">
       <h1 className="text-2xl font-bold mb-4">Novo Agendamento</h1>
 
-      <form action={createAppointment} className="space-y-4">
-        <select name="examId" className="w-full p-2 border rounded">
+      <form action={createAppointment} className="space-y-4 py-2">
+        <label className="text-xl">Exames</label>
+        <select
+          name="examId"
+          className="w-full p-2  mt-2 border  border-content-secondary rounded-md text-xl"
+        >
           {exams.map((e) => (
-            <option key={e.id} value={e.id}>
+            <option
+              key={e.id}
+              value={e.id}
+              className=" mt-4 border-content-secondary rounded-md text-xl"
+            >
               {e.examName}
             </option>
           ))}
         </select>
-        <input
-          type="datetime-local"
-          name="scheduledAt"
-          className="w-full p-2 border rounded"
-        />
-        <textarea
-          name="additionalInformation"
-          placeholder="Observações"
-          className="w-full p-2 border rounded"
-        />
-        <button className="bg-accent-primary text-white px-4 py-2 rounded">
-          Salvar
-        </button>
+        <div className="mt-4">
+          <label className="text-xl mb-2">Selecione data e hora</label>
+
+          <Input
+            type="datetime-local"
+            name="scheduledAt"
+            className="w-full p-2 border border-content-secondary rounded-md"
+          />
+        </div>
+        <div className="mt-4">
+          <label className="text-xl">Observações</label>
+          <Textarea
+            name="additionalInformation"
+            placeholder="Observações"
+            className="w-full p-2 border-content-secondary rounded-md text-xl mt-2"
+          />
+        </div>
+        <Button className="w-sm text-xl bg-accent-primary flex justify-center mx-auto text-white px-4 py-2 rounded">
+          Agendar
+        </Button>
       </form>
     </div>
   );
