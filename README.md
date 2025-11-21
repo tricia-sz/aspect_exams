@@ -102,39 +102,39 @@ git clone git@github.com:tricia-sz/aspect_exams.git
 
 ```
 
-### 3. Instalando as dependências:
+### 3. Abrindo a pasta do projeto no vscode
 
 ```bash
   code .
 
 ```
 
-### 3. Configurando o banco de dados no arquivo `.env` (renmeie o .env.example):
-
+### 4. Configurando a DATABASE_URLarquivo (RENOMEIE o arquivo: env.example) para 
+`.env` 
 ```bash
   DATABASE_URL="postgresql://docker:docker@localhost:5432/aspectexams?schema=public"
 ```
 
-### 3. Instalando as dependências:
+### 5. Instalando as dependências:
 
 ```bash
   npm  install
 
 ```
 
-### 4. Executando as migrações do Prisma:
+### 6. Executando as migrações do Prisma:
 
 ```bash
   npx prisma migrate dev
 ```
 
-### 4. Subindo o docker
+### 7. Subindo o docker
 
 ```bash
   docker compose up -d
 ```
 
-### 5. Iniciando o server:
+### 8. Iniciando o server:
 
 ```bash
   npm run dev
