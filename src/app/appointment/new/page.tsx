@@ -7,19 +7,15 @@ import { Input } from '@/components/ui/input';
 export default async function NewAppointmentPage() {
   const exams = await prisma.exam.findMany();
 
-  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL!;
-
   async function createAppointment(formData: FormData) {
     'use server';
 
-    await fetch(`${BASE_URL}/api/appointments`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        examId: formData.get('examId'),
-        scheduledAt: formData.get('scheduledAt'),
-        additionalInformation: formData.get('additionalInformation'),
-      }),
+    await prisma.appointment.create({
+      data: {
+        examId: String(formData.get('examId')),
+        scheduledAt: new Date(String(formData.get('scheduledAt'))),
+        additionalInformation: String(formData.get('additionalInformation') || ''),
+      },
     });
 
     redirect('/appointment');
