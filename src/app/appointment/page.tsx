@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { prisma } from '../../lib/prisma';
 import { Card } from '@/components/ui/card';
+import { FaTrashAlt } from 'react-icons/fa';
 
 export default async function AppointmentPage() {
   const appointments = await prisma.appointment.findMany({
@@ -9,13 +10,13 @@ export default async function AppointmentPage() {
   });
 
   return (
-    <Card className="max-w-3xl p-6 mt-10 mx-auto rounded-xl shadow-2xl shadow-accent-blue border-none">
+    <Card className="max-w-3xl p-6 mt-10 mx-auto rounded-xl shadow-2xl shadow-accent-primary border-none">
       <div className="flex justify-between mb-6">
         <h1 className="text-3xl font-bold">Agendamentos</h1>
 
         <Link
           href="/appointment/new"
-          className="bg-accent-primary text-white px-4 py-2 rounded-md hover:bg-accent-orange hover:shadow-md transition shadow-sm"
+          className="bg-accent-primary text-white px-4 py-2 rounded-md hover:bg-accent-blue shadow-sm hover:shadow-md transition  shadow-accent-primary"
         >
           + Novo Agendamento
         </Link>
@@ -26,17 +27,27 @@ export default async function AppointmentPage() {
           <Link
             key={a.id}
             href={`/appointment/${a.id}`}
-            className="block rounded-lg p-4 shadow-sm hover:shadow-md transition  shadow-accent-primary "
+            className="flex justify-between rounded-lg p-4 shadow-sm hover:shadow-md transition  shadow-accent-primary "
           >
-            <h2 className="font-bold">{a.exam.examName}</h2>
-            <p className="text-content-secondary py-2">
-              📅 {new Date(a.scheduledAt).toLocaleString('pt-BR')}
-            </p>
-            {a.additionalInformation && (
-              <p className="text-sm text-gray-600">
-                🔎 {a.additionalInformation}
+            <div>
+              <h2 className="font-bold">{a.exam.examName}</h2>
+              <p className="text-content-secondary py-2">
+                📅 {new Date(a.scheduledAt).toLocaleString('pt-BR')}
               </p>
-            )}
+              {a.additionalInformation && (
+                <p className="text-sm text-gray-600">
+                  🔎 {a.additionalInformation}
+                </p>
+              )}
+            </div>
+            <div>
+              <Link
+                href={`/appointment/${appointments.id}`}
+                className="flex  gap-2 items-center  text-accent-primary rounded-2xl p-1"
+              >
+                <FaTrashAlt size={32} />
+              </Link>
+            </div>
           </Link>
         ))}
       </div>

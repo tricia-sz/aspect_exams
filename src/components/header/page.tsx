@@ -1,13 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ThemeToggle } from '../theme-toggle/theme-toggle';
 import { IoHomeSharp } from 'react-icons/io5';
 import { FaUserDoctor } from 'react-icons/fa6';
 import { GrSchedule } from 'react-icons/gr';
+import ThemeToggle from '../theme-toggle/theme-toggle';
 
 export default function Header() {
   return (
-    <header className="bg-accent-primary w-full mx-auto border-b border-b-accent-purple leading-relaxed">
+    <header className="bg-accent-primary w-full mx-auto border-b border-b-accent-orange leading-relaxed">
       <div className="w-full container mx-auto flex items-center justify-between px-6 py-8">
         <div className=" items-center gap-3">
           <Image

@@ -12,10 +12,11 @@ agendamentos e excluam agendamentos existentes.
 
 - [x] **Visualizar Exames Disponíveis:**
 - [x] Listar todos os tipos de exames disponíveis para agendamento.
-- [ ] **Detalhes de cada exame:**
+- [x] **Detalhes de cada exame:**
 
-- ■ Nome do Exame
-- ■ Especialidade médica
+- [x] Nome do Exame
+
+- [x] Especialidade médica
 
 ### 2. 📅 Agendamento de Exames
 
@@ -29,7 +30,6 @@ agendamentos e excluam agendamentos existentes.
 
 - [x] Listar todos os exames agendados.  
        **Detalhes de cada agendamento:**
-
 - ■ Tipo de exame
 - ■ Data e hora agendada
 - ■ Informações adicionais
@@ -65,7 +65,7 @@ agendamentos e excluam agendamentos existentes.
 ## ⭐ Não é obrigatório, mas vamos curtir se você:
 
 - [x] Realizar commits específicos e detalhados;
-- [ ] Acrescentar algum tipo de cache;
+- [x] Acrescentar algum tipo de cache; (THEMA)
 - [ ] Disponibilizar uma solução para deploy da aplicação (Helm chart, docker-compose
       ou similar);
 
