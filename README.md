@@ -19,16 +19,16 @@ agendamentos e excluam agendamentos existentes.
 
 ### 2. 📅 Agendamento de Exames
 
-- [x] **Adicionar Agendamento:**  
-       -[x] Permitir que usuários agendem um exame selecionando:
-
+- [x] **Adicionar Agendamento:**
+- [x] Permitir que usuários agendem um exame selecionando:
 - [x] Tipo de exame
-- ■ Data e hora disponíveis
-- ■ Informações adicionais (observações)
+- [x] Data e hora disponíveis
+- [x] Informações adicionais (observações)
 
-○ **Visualizar Agendamentos:**  
-■ Listar todos os exames agendados.  
-■ **Detalhes de cada agendamento:**
+○ **Visualizar Agendamentos:**
+
+- [x] Listar todos os exames agendados.  
+      **Detalhes de cada agendamento:**
 
 - ■ Tipo de exame
 - ■ Data e hora agendada
