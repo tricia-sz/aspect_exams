@@ -99,14 +99,26 @@ git clone git@github.com:tricia-sz/aspect_exams.git
 
 ```bash
   cd aspect_exams
-  npm install
 
 ```
 
-### 3. Configurando o banco de dados no arquivo `.env`:
+### 3. Instalando as dependências:
+
+```bash
+  code .
+
+```
+
+### 3. Configurando o banco de dados no arquivo `.env` (renmeie o .env.example):
 
 ```bash
   DATABASE_URL="postgresql://docker:docker@localhost:5432/aspectexams?schema=public"
+```
+
+### 3. Instalando as dependências:
+
+```bash
+  npm  install
 
 ```
 
@@ -116,8 +128,15 @@ git clone git@github.com:tricia-sz/aspect_exams.git
   npx prisma migrate dev
 ```
 
+### 4. Subindo o docker
+
+```bash
+  docker compose up -d
+```
+
 ### 5. Iniciando o server:
 
 ```bash
   npm run dev
 ```
+
