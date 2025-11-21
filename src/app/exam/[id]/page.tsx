@@ -1,3 +1,6 @@
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 import { prisma } from '../../../lib/prisma';
 import Link from 'next/link';
 import { IoChevronBackCircleSharp } from 'react-icons/io5';
@@ -5,11 +8,11 @@ import { notFound } from 'next/navigation';
 import { Card } from '@/components/ui/card';
 
 interface PageProps {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 }
 
 export default async function ExamPage({ params }: PageProps) {
-  const { id } = await params;
+  const { id } = params;
 
   const exam = await prisma.exam.findUnique({
     where: { id },
@@ -26,7 +29,7 @@ export default async function ExamPage({ params }: PageProps) {
         <IoChevronBackCircleSharp
           size={32}
           className="text-accent-primary-light"
-        />{' '}
+        />
         Voltar
       </Link>
 
