@@ -34,8 +34,9 @@ agendamentos e excluam agendamentos existentes.
 - ■ Data e hora agendada
 - ■ Informações adicionais
 
-○ **Excluir Agendamento:**  
-■ Permitir que usuários removam um agendamento existente.
+○ **Excluir Agendamento:**
+
+- [x] Permitir que usuários removam um agendamento existente.
 
 ---
 

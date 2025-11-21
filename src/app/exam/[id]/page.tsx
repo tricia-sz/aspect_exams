@@ -23,7 +23,11 @@ export default async function ExamPage({ params }: PageProps) {
         href="/exam"
         className="flex items-center gap-2 text-accent-primary mb-4"
       >
-        <IoChevronBackCircleSharp size={32} /> Voltar
+        <IoChevronBackCircleSharp
+          size={32}
+          className="text-accent-primary-light"
+        />{' '}
+        Voltar
       </Link>
 
       <h1 className="text-3xl font-bold mb-4">{exam.examName}</h1>

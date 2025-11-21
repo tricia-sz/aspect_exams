@@ -1,15 +1,15 @@
+export const runtime = 'nodejs';
+
 import { NextResponse } from 'next/server';
-import { prisma } from '../../../../lib/prisma';
+import { prisma } from '@/lib/prisma';
 
 export async function GET(
   req: Request,
   { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = params;
-
     const exam = await prisma.exam.findUnique({
-      where: { id },
+      where: { id: params.id },
       include: { appointments: true },
     });
 
@@ -20,7 +20,7 @@ export async function GET(
       );
     }
 
-    return NextResponse.json(exam, { status: 200 });
+    return NextResponse.json(exam);
   } catch (error) {
     console.error('Erro na rota GET /exam/[id]:', error);
     return NextResponse.json(

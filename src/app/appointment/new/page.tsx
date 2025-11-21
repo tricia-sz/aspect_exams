@@ -7,10 +7,12 @@ import { Input } from '@/components/ui/input';
 export default async function NewAppointmentPage() {
   const exams = await prisma.exam.findMany();
 
+  const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL!;
+
   async function createAppointment(formData: FormData) {
     'use server';
 
-    await fetch('http://localhost:3000/api/appointments', {
+    await fetch(`${BASE_URL}/api/appointments`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -31,27 +33,24 @@ export default async function NewAppointmentPage() {
         <label className="text-xl">Exames</label>
         <select
           name="examId"
-          className="w-full p-2  mt-2 border  border-content-secondary rounded-md text-xl"
+          className="w-full p-2 mt-2 border border-content-secondary rounded-md text-xl"
         >
           {exams.map((e) => (
-            <option
-              key={e.id}
-              value={e.id}
-              className=" mt-4 border-content-secondary rounded-md text-xl"
-            >
+            <option key={e.id} value={e.id}>
               {e.examName}
             </option>
           ))}
         </select>
+
         <div className="mt-4">
           <label className="text-xl mb-2">Selecione data e hora</label>
-
           <Input
             type="datetime-local"
             name="scheduledAt"
             className="w-full p-2 border border-content-secondary rounded-md"
           />
         </div>
+
         <div className="mt-4">
           <label className="text-xl">Observações</label>
           <Textarea
@@ -60,6 +59,7 @@ export default async function NewAppointmentPage() {
             className="w-full p-2 border-content-secondary rounded-md text-xl mt-2"
           />
         </div>
+
         <Button className="w-sm text-xl bg-accent-primary flex justify-center mx-auto text-white px-4 py-2 rounded">
           Agendar
         </Button>

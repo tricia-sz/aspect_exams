@@ -1,5 +1,6 @@
-import Link from 'next/link';
 import { prisma } from '../../../lib/prisma';
+import { Card } from '@/components/ui/card';
+import Link from 'next/link';
 
 export default async function AppointmentDetails({
   params,
@@ -11,37 +12,53 @@ export default async function AppointmentDetails({
     include: { exam: true },
   });
 
-  if (!appointment) return <p>Agendamento não encontrado</p>;
-
-  async function deleteAppointment() {
-    await fetch(`http://localhost:3000/api/appointments/${params.id}`, {
-      method: 'DELETE',
-    });
+  if (!appointment) {
+    return (
+      <div className="max-w-2xl mx-auto mt-10 text-center">
+        <h1 className="text-2xl font-bold text-red-500">
+          Agendamento não encontrado
+        </h1>
+        <Link
+          href="/appointment"
+          className="text-blue-600 underline mt-4 block"
+        >
+          Voltar
+        </Link>
+      </div>
+    );
   }
 
   return (
-    <div className="max-w-xl mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">{appointment.exam.examName}</h1>
+    <Card className="max-w-2xl mx-auto p-6 mt-10 shadow-xl rounded-xl space-y-6">
+      <Link href="/appointment" className="text-accent-primary underline">
+        ← Voltar
+      </Link>
 
-      <p>📅 {new Date(appointment.scheduledAt).toLocaleString('pt-BR')}</p>
-      {appointment.additionalInformation && (
-        <p className="mt-2">📝 {appointment.additionalInformation}</p>
-      )}
+      <h1 className="text-3xl font-bold">Detalhes do Agendamento</h1>
 
-      <div className="space-x-4 mt-6">
-        <Link
-          href={`/appointment/${params.id}/edit`}
-          className="bg-blue-600 text-white px-4 py-2 rounded"
-        >
-          Editar
-        </Link>
+      <div className="space-y-3">
+        <p className="text-lg">
+          <span className="font-semibold">Exame:</span>{' '}
+          {appointment.exam.examName}
+        </p>
 
-        <form action={deleteAppointment} className="inline-block">
-          <button className="bg-red-600 text-white px-4 py-2 rounded">
-            Excluir
-          </button>
-        </form>
+        <p className="text-lg">
+          <span className="font-semibold">Especialidade:</span>{' '}
+          {appointment.exam.medicalSpecialisty}
+        </p>
+
+        <p className="text-lg">
+          <span className="font-semibold">Data agendada:</span>{' '}
+          {new Date(appointment.scheduledAt).toLocaleString('pt-BR')}
+        </p>
+
+        {appointment.additionalInformation && (
+          <p className="text-lg">
+            <span className="font-semibold">Informações adicionais:</span>{' '}
+            {appointment.additionalInformation}
+          </p>
+        )}
       </div>
-    </div>
+    </Card>
   );
 }
