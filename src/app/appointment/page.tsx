@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { prisma } from '../../lib/prisma';
 import { Card } from '@/components/ui/card';
-import DeleteAppointmentButton from './DeleteAppointmentButton';
+import AppointmentItem from './AppointmentItem';
 
 export default async function AppointmentPage() {
   const appointments = await prisma.appointment.findMany({
@@ -24,23 +24,7 @@ export default async function AppointmentPage() {
 
       <div className="space-y-4">
         {appointments.map((a) => (
-          <div
-            key={a.id}
-            className="flex justify-between items-center rounded-lg p-4 shadow-sm hover:shadow-md transition shadow-accent-primary"
-          >
-            <Link href={`/appointment/${a.id}`} className="flex-1">
-              <h2 className="font-bold">{a.exam.examName}</h2>
-              <p className="text-content-secondary py-2">
-                📅 {new Date(a.scheduledAt).toLocaleString('pt-BR')}
-              </p>
-              {a.additionalInformation && (
-                <p className="text-sm text-gray-600">
-                  🔎 {a.additionalInformation}
-                </p>
-              )}
-            </Link>
-            <DeleteAppointmentButton appointmentId={a.id} />
-          </div>
+          <AppointmentItem key={a.id} a={a} />
         ))}
       </div>
     </Card>

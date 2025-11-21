@@ -51,6 +51,7 @@ export default async function ExamPage() {
                 className="flex  gap-2 items-center  text-accent-primary rounded-2xl p-1"
               >
                 <IoEyeSharp size={32} />
+                Detalhes
               </Link>
             </div>
           </div>
