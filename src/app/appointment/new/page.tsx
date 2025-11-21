@@ -24,7 +24,7 @@ export default async function NewAppointmentPage() {
   }
 
   return (
-    <div className="max-w-xl mx-auto mt-10 p-6 rounded-lg shadow-2xl shadow-accent-primary border-none">
+    <div className="max-w-xl mx-auto mt-10 p-6 rounded-lg shadow-2xl shadow-accent-blue border-none">
       <h1 className="text-2xl font-bold mb-4">Novo Agendamento</h1>
 
       <form action={createAppointment} className="space-y-4 py-2">

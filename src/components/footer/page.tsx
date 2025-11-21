@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-accent-primary-light w-full py-6  items-center justify-center mt-10 border-t border-t-accent-orange">
       <div className="flex justify-center mx-auto mt-4 mb-6">
         <Image
-          src="/logoAspectWhite.png"
+          src="/Am.png"
           alt="logo aspect white"
           width={200}
           height={200}
@@ -20,11 +20,11 @@ export default function Footer() {
             href="https://tricia-sz.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium  hover:underline dark:text-amber-600"
+            className="font-medium  hover:underline dark:text-amber-500"
           >
             Patrícia Souza
           </a>{' '}
-          🤎2025
+          💛2025
         </div>
       </div>
     </footer>

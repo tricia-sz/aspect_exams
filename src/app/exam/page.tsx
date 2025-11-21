@@ -9,13 +9,13 @@ export default async function ExamPage() {
   });
 
   return (
-    <Card className="max-w-3xl mx-auto p-6 mt-10 rounded-xl shadow-2xl shadow-accent-primary border-none">
+    <Card className="max-w-3xl mx-auto p-6 mt-10 rounded-xl shadow-2xl border-none shadow-content-secondary">
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-3xl font-bold">Exames</h1>
 
         <a
           href="/exam/new"
-          className="inline-block mb-4 bg-accent-primary text-white px-4 py-2 rounded-md hover:bg-accent-blue shadow-sm hover:shadow-md transition  shadow-accent-primary"
+          className="inline-block mb-4 bg-accent-primary text-white px-4 py-2 rounded-md hover:bg-accent-blue shadow-sm hover:shadow-md transition shadow-accent-blue"
         >
           + Novo Exame
         </a>
@@ -29,7 +29,7 @@ export default async function ExamPage() {
         {exams.map((exam) => (
           <div
             key={exam.id}
-            className="border-none  rounded-lg p-4 shadow-sm hover:shadow-md transition  shadow-accent-primary"
+            className="rounded-lg p-4 shadow-sm hover:shadow-md transition  shadow-accent-primary"
           >
             <h2 className="text-xl font-semibold">{exam.examName}</h2>
             <p className="text-content-secondary">{exam.medicalSpecialisty}</p>

@@ -9,7 +9,7 @@ export default async function AppointmentPage() {
   });
 
   return (
-    <Card className="max-w-3xl p-6 mt-10 mx-auto rounded-xl shadow-2xl shadow-accent-primary border-none">
+    <Card className="max-w-3xl p-6 mt-10 mx-auto rounded-xl shadow-2xl shadow-accent-blue border-none">
       <div className="flex justify-between mb-6">
         <h1 className="text-3xl font-bold">Agendamentos</h1>
 

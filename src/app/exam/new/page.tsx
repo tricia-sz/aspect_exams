@@ -56,7 +56,7 @@ export default function NewExamPage() {
   }
 
   return (
-    <div className="max-w-xl mx-auto mt-10 p-6 rounded-lg shadow-2xl shadow-accent-primary border-none">
+    <div className="max-w-xl mx-auto mt-10 p-6 rounded-lg shadow-2xl shadow-accent-blue border-none">
       <h1 className="text-2xl font-bold mb-4">Novo Exame</h1>
 
       <form onSubmit={handleSubmit} className="space-y-4">
