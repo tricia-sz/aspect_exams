@@ -50,7 +50,7 @@ export default async function ExamPage() {
                 href={`/exam/${exam.id}`}
                 className="flex  gap-2 items-center  text-accent-primary rounded-2xl p-1"
               >
-                <IoEyeSharp size={32} /> DETALHES
+                <IoEyeSharp size={32} />
               </Link>
             </div>
           </div>
