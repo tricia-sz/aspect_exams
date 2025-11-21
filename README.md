@@ -147,7 +147,7 @@ git clone git@github.com:tricia-sz/aspect_exams.git
 ```
 
 ## Telas: 
-![home](image-5.png)
+![home](public/image-5.png)
 
 ## Detalhes em do agendament inline
 ![detalhes inline](public/image-6.png)
