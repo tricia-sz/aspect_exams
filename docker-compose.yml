@@ -12,5 +12,22 @@ services:
     volumes:
       - /home/tricia/docker-volumes/aspectexams/pgdata:/var/lib/postgresql/data
 
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: aspectexams-app
+    restart: always
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: postgresql://docker:docker@postgres:5432/aspectexams?schema=public
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+    command: ['node', 'server.js']
+
 volumes:
   pgdata:
