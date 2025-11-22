@@ -1,5 +1,6 @@
 import ExamPage from './exam/page';
 import AppointmentPage from './appointment/page';
+import ChatPage from '@/components/chat/ChatAssistant';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div>
         <AppointmentPage />
       </div>
+      <ChatPage />
     </div>
   );
 }

@@ -1,0 +1,23 @@
+<div id="spt-widget">
+    <button id="spt-open-btn" class="spt-btn" aria-label="Abrir chat">
+        <span class="spt-btn-avatar-wrapper">
+            <img id="spt-icon" alt="Chatbot" />
+            <span class="spt-btn-badge">1</span>
+        </span>
+    </button>
+
+    <div class="spt-chat-window" id="spt-chat-window" style="display:none">
+        <div class="spt-chat-header">
+            <img src="" alt="Bot logo" class="spt-chat-header-logo" id="spt-header-icon" />
+            <span class="spt-chatbot-name" id="spt-chatbot-name"></span>
+            <button class="spt-close-btn" id="spt-close-btn" aria-label="Close chat">&times;</button>
+        </div>
+        <div class="spt-chat-body" id="spt-messages">
+        </div>
+        <form class="spt-chat-footer" id="spt-form" autocomplete="off">
+            <input type="text" id="spt-input" placeholder="Digite sua mensagem..." autocomplete="off" />
+            <button type="submit" id="spt-submit">Enviar</button>
+            <button type="button" id="spt-stop" alt="Parar parar geração de IA">🛑</button>
+        </form>
+    </div>
+</div>
