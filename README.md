@@ -150,36 +150,36 @@ git clone git@github.com:tricia-sz/aspect_exams.git
 
 ## Home
 
-![home](public/doc-img/home.png)
+![home](public/home.png)
 
 ## Listagem de exames + ChatBot IA (Bonus)
 
-![ChatResponse](public/doc-img/chatresponse.png)
+![ChatResponse](public/chatresponse.png)
 
 ## Novo Exame
 
-![NovoExame](public/doc-img/novoexam.png)
+![NovoExame](public/novoexam.png)
 
 ## Detalhes de Exames[id]
 
-![NovoExame](public/doc-img/examId.png)
+![NovoExame](public/examId.png)
 
 ## Listagem de agendamentos
 
-![Lista agendamento](public/doc-img/listagemagendamentos.png)
+![Lista agendamento](public/listagemagendamentos.png)
 
 ## Novo agendamento
 
-![Novo agendamento](public/doc-img/novoagendamento.png)
+![Novo agendamento](public/novoagendamento.png)
 
 ## Detalhes de agendamento
 
-![Detalhes agendamento](public/doc-img/detalhesagendamento.png)
+![Detalhes agendamento](public/detalhesagendamento.png)
 
 ## Dark Mode Theme
 
-![Darkmode](public/doc-img/darkmode.png)
+![Darkmode](public/darkmode.png)
 
 ## Dark Mode Theme Chat
 
-![listddark](public/doc-img/listdark.png)
+![listddark](public/listdark.png)
