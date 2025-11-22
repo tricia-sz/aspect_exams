@@ -11,7 +11,7 @@ export default function Header() {
       <div className="w-full container mx-auto flex items-center justify-between px-6 py-8">
         <div className=" items-center gap-3">
           <Image
-            src="/Am.png"
+            src="/AspectExamsOrange.png"
             alt="logo aspect white"
             width={300}
             height={300}

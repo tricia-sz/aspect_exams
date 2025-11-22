@@ -150,44 +150,36 @@ git clone git@github.com:tricia-sz/aspect_exams.git
 
 ## Home
 
-![home](public/img/image-5.png)
+![home](public/doc-img/home.png)
 
-## ChatBot IA (Bonus)
+## Listagem de exames + ChatBot IA (Bonus)
 
-![ChatBotIA](public/img/chatbot.png)
+![ChatResponse](public/doc-img/chatresponse.png)
 
 ## Novo Exame
 
-![novo exame](public/img/novoexame.png)
-
-## Listagem de Exames
-
-![list exam](public/img/image-7.png)
+![NovoExame](public/doc-img/novoexam.png)
 
 ## Detalhes de Exames[id]
 
-![detalhesrouter](public/img/image-8.png)
-
-## Detalhes de agendamento (inline)
-
-![detalhes inline](public/img/image-6.png)
-
-## Novo agendamento
-
-![agendamentos](public/img/novo_agendamento.png)
+![NovoExame](public/doc-img/examId.png)
 
 ## Listagem de agendamentos
 
-![agendamentos](public/img/image-9.png)
+![Lista agendamento](public/doc-img/listagemagendamentos.png)
 
-## Detalhes em Listagem de Agendamentos
+## Novo agendamento
 
-![Detalhes](public/img/image-10.png)
+![Novo agendamento](public/doc-img/novoagendamento.png)
+
+## Detalhes de agendamento
+
+![Detalhes agendamento](public/doc-img/detalhesagendamento.png)
 
 ## Dark Mode Theme
 
-![Dark Mode](public/img/image-11.png)
+![Darkmode](public/doc-img/darkmode.png)
 
 ## Dark Mode Theme Chat
 
-![Dark Mode](public/img/chatbotmodedark.png)
+![listddark](public/doc-img/listdark.png)

@@ -52,7 +52,7 @@
   position: fixed;
   bottom: 68px;
   right: 110px;
-  background: var(--botBubble, #0f172a);
+  background: var(--botBubble, #0d3d72);
   color: var(--botText, #f6f8fa);
   padding: 13px 18px;
   font-size: 1.2em;
@@ -193,7 +193,7 @@
   height: 30px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0 4px 12px 0 #0d2aaf;
+  box-shadow: 0 4px 12px 0 #f09102;
 }
 
 .spt-chatbot-name {
