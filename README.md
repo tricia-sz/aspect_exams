@@ -109,8 +109,10 @@ git clone git@github.com:tricia-sz/aspect_exams.git
 
 ```
 
-### 4. Configurando a DATABASE_URLarquivo (RENOMEIE o arquivo: env.example) para 
-`.env` 
+### 4. Configurando a DATABASE_URLarquivo (RENOMEIE o arquivo: env.example) para
+
+`.env`
+
 ```bash
   DATABASE_URL="postgresql://docker:docker@localhost:5432/aspectexams?schema=public"
 ```
@@ -146,23 +148,38 @@ git clone git@github.com:tricia-sz/aspect_exams.git
   npm run dev
 ```
 
-## Telas: 
+## Home
+
 ![home](public/image-5.png)
 
-## Detalhes em do agendament inline
-![detalhes inline](public/image-6.png)
+## Novo Exame
+
+![novo exame](public/novoexame.png)
 
 ## Listagem de Exames
+
 ![list exam](public/image-7.png)
 
-## Detalhes do exame router[id]
+## Detalhes de Exames[id]
+
 ![detalhesrouter](public/image-8.png)
 
-## Agendamentos
+## Detalhes de agendamento (inline)
+
+![detalhes inline](public/image-6.png)
+
+## Novo agendamento
+
+![agendamentos](public/novo%20agendamento.png)
+
+## Listagem de agendamentos
+
 ![agendamentos](public/image-9.png)
 
-## Detalhes em Listagem de Agendamentos 
+## Detalhes em Listagem de Agendamentos
+
 ![Detalhes](public/image-10.png)
 
-## dark Mode
-![dark Mode](public/image-11.png)
+## Dark Mode Theme
+
+![Dark Mode](public/image-11.png)
