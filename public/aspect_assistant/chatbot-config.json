@@ -1,0 +1,16 @@
+{
+  "primaryColor": "#0d3d72",
+  "chatbotName": "Aspect",
+  "buttonColor": "#FFA500",
+  "backgroundColor": "#7f00ff00",
+  "headerColor": "#0d3d72",
+  "userBubble": "#f09102",
+  "botBubble": "#0d3d72",
+  "userText": "#fff",
+  "botText": "#fff",
+  "iconUrl": "../avatar.png",
+  "botAvatar": "../avatar.png",
+  "welcomeBubble": "Olá, eu sou o Aspect. Gostaria de verificar sobre exames ou agendamentos??",
+  "firstBotMessage": "Me informa o que gostaria de saber?",
+  "typingDelay": 0.5
+}
