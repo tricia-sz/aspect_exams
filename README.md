@@ -127,13 +127,7 @@ git clone git@github.com:tricia-sz/aspect_exams.git
 ### 6. Executando Prisma Generate:
 
 ```bash
-  npx prisma migrate generated
-```
-
-### 6. Executando as migrações do Prisma:
-
-```bash
-  npx prisma migrate dev
+  npx prisma generate
 ```
 
 ### 7. Subindo o docker (em terminal/cmd alternativo)
